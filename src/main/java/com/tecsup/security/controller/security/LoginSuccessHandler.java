@@ -26,12 +26,12 @@ public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     private UsuarioDAO usuarioDAO;
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request,
-            HttpServletResponse response, Authentication a) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication a) throws IOException, ServletException {
+        
         Usuario autenticado = usuarioDAO.findByLogin(a.getName());
-        request.getSession().setAttribute("USUARIO_AUTENTICADO", autenticado.getPersona()
-        );
-setDefaultTargetUrl("/principal");
+        request.getSession().setAttribute("USUARIO_AUTENTICADO", autenticado.getPersona());
+        
+        setDefaultTargetUrl("/principal");
         super.onAuthenticationSuccess(request, response, a);
     }
 }

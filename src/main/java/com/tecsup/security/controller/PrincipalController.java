@@ -2,11 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.tecsup.security.controller.security;
+package com.tecsup.security.controller;
 
 import java.util.Date;
-import javax.enterprise.inject.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -31,6 +31,6 @@ public class PrincipalController {
     @RequestMapping(value = "/adm/principal")
     public String cargarPortadaAdm(Model model) {
         model.addAttribute("mensaje", "Administración");
-        return "security/adm"
-    
-;
+        return "security/adm";
+    }
+}

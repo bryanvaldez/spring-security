@@ -4,8 +4,9 @@
  */
 package com.tecsup.security.controller.security;
 
-import javax.enterprise.inject.Model;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
