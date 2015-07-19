@@ -10,16 +10,14 @@
     </head>
     <body>
         <h3>Spring Security Login</h3>
-        <form method="post" name="f" action="j_spring_security_check">
+        <form method="post" name="f" action="<%=request.getContextPath()%>/j_spring_security_check">
             <table>
                 <c:if test="${loginError}">
                     <tr><td colspan="2" style="color: red">Usuario / Clave
                             incorrectos.</td></tr>
                         </c:if>
-                <tr><td>Usuario:</td><td><input type="text" name="j_username"
-                                                value=""/></td></tr>
-                <tr><td>Clave:</td><td><input type="password" name="j_password"
-                                              value=""/></td></tr>
+                <tr><td>Usuario:</td><td><input type="text" name="j_username" value=""/></td></tr>
+                <tr><td>Clave:</td><td><input type="password" name="j_password" value=""/></td></tr>
                 <tr><td><input type="submit" value="Ingresar"/></td></tr>
             </table>
         </form>

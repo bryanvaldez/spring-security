@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author alumno
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/test")
 public class TestController {
     @ResponseBody
     @RequestMapping(method=RequestMethod.GET)

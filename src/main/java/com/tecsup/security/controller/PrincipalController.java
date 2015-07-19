@@ -25,7 +25,7 @@ public class PrincipalController {
     @RequestMapping(value = "/ventas/principal")
     public String cargarPortadaVentas(Model model) {
         model.addAttribute("mensaje", "Registre sus Ventas");
-        return "security/ventas";
+        return "security/vendedor";
     }
 
     @RequestMapping(value = "/adm/principal")

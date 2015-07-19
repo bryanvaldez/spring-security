@@ -34,6 +34,8 @@ public class UserDetailsServiceImp implements UserDetailsService {
     public UserDetails loadUserByUsername(String string) throws
             UsernameNotFoundException {
         Usuario usuario = usuarioDAO.findByLogin(string);
+        
+        
         if (usuario == null) {
             throw new UsernameNotFoundException("Usuario no encontrado");
         }
